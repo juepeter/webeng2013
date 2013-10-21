@@ -9,12 +9,16 @@
 	<h1 align=center>Web-Engineering I: Grundlagen der Web-Entwicklung </h1>
 	<h2 align=center>Hausaufgabe zu Kurseinheit 1 bearbeitet von Jürgen Peter</h1>
 </header>
-<table>
-	<caption>Probleme der ersten Kurseinheit</caption>
+<table border=1 rules="all">
+	<caption><b>Probleme der ersten Kurseinheit</b></caption>
+	<thead>
 	<tr><th>Problem</th><th>Lösung</th></tr>
-	<tr><td>In Windows 7 Oracle VM Virtual Box Manager nicht als Administrator installiert, dann treten bei Start der VM Probleme</td>
+	<tr><td>In Windows 7 Oracle VM Virtual Box Manager nicht als Administrator installiert, dann treten bei Start der VM Probleme auf</td>
         <td>Deinstallieren und neu als Admin installieren</td>
-     </tr>	
+    </tr>
+    </thead>
+    
+    <tbody> 	
 	<tr><td>USB 2.0-Problem: USB 2.0 is currently enabled for this virtual machine. However, this requires the Oracle VM VirtualBox Extension Pack to be installed.</td>
         <td>Einfache Lösung: USB 2.0 deaktivieren (Häkchen bei Eigenschaften der VM, USB für USB 2.0 wegnehmen)
             Grundsätzliche Lösung: Oracle VM VirtualBox Extension Pack installieren.
@@ -29,7 +33,7 @@
      <tr><td>Webverzeichnis des Webservers, das im Video angegeben wird, existiert nicht</td>
          <td>Das angegebene Webverzeichnis ist falsch, korrekt ist das Verzeichnis /home/developer/public_html</td>
      </tr>
-     <tr><td>@ auf Tastatur funktioniert nicht. Dies scheint tastaturspezifischer Fehler zu sei. Standardmässig ist Apple-Tastatur in der VM eingestellt</td>
+     <tr><td>@ auf Tastatur funktioniert nicht. Dies scheint ein tastaturspezifischer Fehler zu sein. Standardmässig ist Apple-Tastatur in der VM eingestellt</td>
          <td>Eine simple Lösung ist das Durchprobieren aller Tasten mit AltGr bis man @ findet. Scheint bei fast allen die Kombination AltGrL zu sein.
              Alternativ kann man auch die Tastatureinstellung ändern (Achtung: wird erst wirksam nach Neustart der VM oder vielleicht reicht auch Neustart der Terminalsession). Der Hersteller meiner Tastatur ist Trust
              und ich habe willkürlich eine Trust-Tastatur unter Angeboten ausgewählt und es hat funktioniert. Bei anderen hat Tastatur Microsoft Office oder schlicht Tastatur Deutsch funktioniert.
@@ -38,12 +42,23 @@
       </tr>
       <tr><td>Wie funktioniert Kopieren und Einfügen? Generell und im Terminal</td>
           <td>Generell sollte man in den Einstellungen der VM unter General -> Advanced Shared Clipboard auf Bidirectional setzen.
-              Dann kann beliebig aus/in X-Fenster der VM kopieren/einfügen mit gewohnten Kontextmenus oder StrgC, StrgV.
+              Dann kann man beliebig aus/in X-Fenster der VM kopieren/einfügen mit gewohnten Kontextmenus oder StrgC, StrgV.
               Aus mir unerfindlichen Gründen geht das im Terminal-Fenster nicht. Hier muss man StrgEinfg für Kopieren und ShiftEinfg
-              für Kopieren verwenden.
+              für Einfügen verwenden.
            </td>
        </tr>
-     	        	
+       <tr><td>Man erhält bei Aufruf der App in der Cloud: 403 Forbidden You don't have permission to access / on this server.
+               Eine genauere Angabe liefert cctrlapp .. log error: Directory index forbidden by Options directive: /app/code/.
+           </td>
+           <td>Ich hatte die index.html aus public_html nach bootstrap verschoben, weil aus dem Text darin eigentlich hervorging, das wir 
+               sie als Grundlage benutzen sollen und bootstrap mein Ellipse-Projektverzeichnis ist.
+               Anscheinend wird aber die index.html in public_html benötigt. Merkwürdigerweise war dies bei dem Probelauf mit php-hello_world_app
+               nicht so. Ich arbeite also zur Zeit in meinem Projekt bootstrap mit Ellipse, wenn ich die index.html fertig habe, dann
+               wird sie nach public_html kopiert und dann klappt auch die Veröffentlichung in der Cloud. <b>Für eine Erklärung wäre
+               ich sehr dankbar!</b> Man kann übrigens den 403 Fehler auch lokal produzieren, wenn man die Zugriffsrechte auf index.html zu eng setzt.
+           </td>
+       </tr>
+       </tbody>
 </table>
 <article>
 	<p>
@@ -51,12 +66,20 @@
 		<a href="http://juergenpeter.cloudcontrolled.com">juergenpeter.cloudcontrolled.com</a> ausgeliefert.
 	</p>
 	<p>
-		Sie werden hier Ihre Website erstellen, auf der Sie auch ohne Internetzugang surfen können.
-		Erst wenn Sie mit Ihrer Arbeit zufrieden sind, geht's in die Cloud.
+		<b>Beurteilung der Kurseinheit 1:</b>
 	</p>
 	<p>
-		Ihr Kursteam
+		Ich finde, es ist eine sehr gute Idee, über die Auslieferung einer VM für alle Kursteilnehmer gleiche Grundlagen zu schaffen.
+		Insgesamt war die Installation erfreulich einfach. Die wenigen Probleme, die auftraten, habe ich versucht, in der obigen
+		Tabelle zu dokumentieren. Hilfreich wäre an manchen Punkten vielleicht zu dem Video noch eine kurze schriftliche Anleitung/
+		Zusammenfassung zu geben. Insbesondere die Funktion von public_html ist mir noch nicht so klar. Gerade bzgl. des letzten Problems, 
+		das ja anscheinend nicht bei vielen Teilnehmern aufgetreten ist, ist mir immer noch unklar, wo genau mein Fehler liegt.
+	<p>
+		Mit freundlichen Grüssen
 	</p>
+	<p>
+	    Jürgen Peter
+	</p>    
 </article>
 </body>
 </html>
