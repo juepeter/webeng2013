@@ -12,11 +12,29 @@
 <table>
 	<caption>Probleme der ersten Kurseinheit</caption>
 	<tr><th>Problem</th><th>Lösung</th></tr>
+	<tr><td>In Windows 7 Oracle VM Virtual Box Manager nicht als Administrator installiert, dann treten bei Start der VM Probleme</td>
+        <td>Deinstallieren und neu als Admin installieren</td>
+     </tr>	
+	<tr><td>USB 2.0-Problem: USB 2.0 is currently enabled for this virtual machine. However, this requires the Oracle VM VirtualBox Extension Pack to be installed.</td>
+        <td>Einfache Lösung: USB 2.0 deaktivieren (Häkchen bei Eigenschaften der VM, USB für USB 2.0 wegnehmen)
+            Grundsätzliche Lösung: Oracle VM VirtualBox Extension Pack installieren.
+            Bei der Erstellung der VM muss das Extension Pack installiert gewesen sein, sonst lässt sich das Häkchen nicht setzen.</td>
+     </tr>
+     <tr><td>PAE-Problem: The guest is trying to switch to the PAE mode which is currently disabled by default in VirtualBox.</td>
+         <td>Eigenschaften der VM: System -> Processor Häkchen bei Enable PAE setzen.</td>
+     </tr>
+     <tr><td>Schlechte Auflösung der Videos</td>
+     	 <td>Einstellung auf 720p</td>
+     </tr>
+     <tr><td>Webverzeichnis des Webservers, das im Video angegeben wird, existiert nicht</td>
+         <td>Das angegebene Webverzeichnis ist falsch, korrekt ist das Verzeichnis /home/developer/public_html</td>
+     </tr>
+     	        	
 </table>
 <article>
 	<p>
-		Diese Seite wird von Ihrem eigenen Webserver auf Ihrem eigenen Rechner unter der Top-Level-Domain
-		<a href="http://localhost">localhost</a> ausgeliefert.
+		Diese Seite wird in der Cloud unter
+		<a href="http://juergenpeter.cloudcontrolled.com">juergenpeter.cloudcontrolled.com</a> ausgeliefert.
 	</p>
 	<p>
 		Sie werden hier Ihre Website erstellen, auf der Sie auch ohne Internetzugang surfen können.
